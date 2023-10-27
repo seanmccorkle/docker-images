@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    label 'main'
-  }
+  agent {}
 
   environment {
     APP_ORIGIN_WORKSPACE = "${env.WORKSPACE}"
