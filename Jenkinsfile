@@ -1,4 +1,5 @@
 pipeline {
+  agent any
   environment {
     APP_ORIGIN_WORKSPACE = "${env.WORKSPACE}"
   }
