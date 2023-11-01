@@ -11,5 +11,16 @@ pipeline {
         echo "APP_ORIGIN_WORKSPACE = ${APP_ORIGIN_WORKSPACE}"
       }
     }
+
+    stage('Trigger build') {
+      when {
+        branch 'main'
+      }
+
+      steps {
+        dockerBuild()
+      }
+    }
+    
   }
 }
